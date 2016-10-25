@@ -9,6 +9,11 @@
 
     {{test}}
 
+    <div ng-repeat="stuff in quotes">
+      "{{stuff.text}}"
+      <b>{{stuff.author}}</b>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script src="app.js"></script>
     <script src="controller.js"></script>
