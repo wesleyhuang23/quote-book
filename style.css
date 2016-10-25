@@ -1,0 +1,15 @@
+span{
+  font-family: helvetica;
+  font-weight: bold;
+  color: #717171
+}
+
+.quotes{
+  background-color: F6FFFB;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+p{
+  font-size: 20px;
+}

@@ -6,13 +6,21 @@
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
-
-    {{test}}
-
-    <div ng-repeat="stuff in quotes">
-      "{{stuff.text}}"
-      <b>{{stuff.author}}</b>
+    search by text:<input ng-model="quote">
+    <div class="quotes" ng-repeat="stuff in quotes | filter: quote" ng-model="stuff.text">
+      <p>"{{stuff.text}}"</p>
+      <br>
+      <span>{{stuff.author}}</span>
+      <button ng-click="removeQuote(stuff.text)">x</button>
     </div>
+    <br>
+    Add your own quote
+    <br>
+    text: <input type="text" placeholder="Add new quote!" ng-model="newQuoteText">
+    author: <input type="text" placeholder="Add new Author!" ng-model="newQuoteAuthor">
+    <button ng-click="addQuote(newQuoteText, newQuoteAuthor)">
+      Add Quote!
+    </button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script src="app.js"></script>
